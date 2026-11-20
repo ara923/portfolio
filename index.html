@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>홍길동 | Portfolio</title>
+  <meta name="description" content="프론트엔드 개발자 홍길동의 포트폴리오" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 헤더 / 내비게이션 -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">GD<span>.</span></a>
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" aria-label="테마 전환">🌙</button>
+        <button class="icon-btn nav__toggle" id="navToggle" aria-label="메뉴 열기">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <p class="hero__greeting">안녕하세요, 저는</p>
+        <h1 class="hero__name">홍길동입니다.</h1>
+        <h2 class="hero__role"><span id="typing"></span><span class="cursor">|</span></h2>
+        <p class="hero__desc">
+          사용자 경험을 고민하며 깔끔하고 견고한 웹을 만드는 개발자입니다.<br />
+          작은 디테일이 큰 차이를 만든다고 믿습니다.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">프로젝트 보기</a>
+          <a href="#contact" class="btn btn--ghost">연락하기</a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="아래로 스크롤">↓</a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title reveal"><span>01.</span> About Me</h2>
+        <div class="about reveal">
+          <div class="about__img">
+            <div class="about__img-placeholder">사진</div>
+          </div>
+          <div class="about__text">
+            <p>
+              안녕하세요! 저는 <strong>웹 프론트엔드</strong>에 관심이 많은 개발자 홍길동입니다.
+              여기에 자기소개를 작성하세요. 어떤 계기로 개발을 시작했는지, 어떤 가치를 중요하게 여기는지
+              2~3문단 정도로 적으면 좋습니다.
+            </p>
+            <p>
+              최근에는 접근성과 성능 최적화에 관심을 두고 공부하고 있으며,
+              팀과 함께 성장하는 것을 좋아합니다.
+            </p>
+            <ul class="about__facts">
+              <li><span>📍</span> 서울, 대한민국</li>
+              <li><span>🎓</span> OO대학교 컴퓨터공학과</li>
+              <li><span>💼</span> 신입 / 주니어 개발자</li>
+              <li><span>☕</span> 커피와 코드 리뷰를 좋아함</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title reveal"><span>02.</span> Skills</h2>
+        <div class="skills">
+          <div class="skill-card reveal">
+            <h3>Frontend</h3>
+            <ul class="tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li><li>React</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Backend</h3>
+            <ul class="tags">
+              <li>Node.js</li><li>Express</li><li>MySQL</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Tools</h3>
+            <ul class="tags">
+              <li>Git</li><li>GitHub</li><li>Figma</li><li>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title reveal"><span>03.</span> Projects</h2>
+        <div class="filters reveal" id="filters">
+          <button class="filter active" data-filter="all">전체</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="app">App</button>
+          <button class="filter" data-filter="toy">Toy</button>
+        </div>
+        <div class="projects" id="projectList">
+          <!-- script.js 에서 렌더링 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section section--alt" id="experience">
+      <div class="container">
+        <h2 class="section__title reveal"><span>04.</span> Experience</h2>
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <span class="timeline__date">2025.03 – 현재</span>
+            <h3>OO 회사 · 프론트엔드 인턴</h3>
+            <p>사내 어드민 대시보드 UI 개발 및 컴포넌트 리팩터링.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__date">2024.07 – 2024.12</span>
+            <h3>OO 부트캠프 수료</h3>
+            <p>팀 프로젝트 3회 진행, 최우수 프로젝트 선정.</p>
+          </li>
+          <li class="timeline__item reveal">
+            <span class="timeline__date">2020.03 – 2024.02</span>
+            <h3>OO대학교 컴퓨터공학과</h3>
+            <p>학사 졸업. 웹 개발 동아리 회장 역임.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact reveal">
+        <h2 class="section__title section__title--center"><span>05.</span> Contact</h2>
+        <p class="contact__desc">
+          새로운 기회나 협업 제안은 언제든 환영합니다.<br />편하게 연락 주세요!
+        </p>
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="이름" required />
+            <input type="email" name="email" placeholder="이메일" required />
+          </div>
+          <textarea name="message" rows="5" placeholder="메시지" required></textarea>
+          <button type="submit" class="btn btn--primary">보내기</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+        <ul class="socials">
+          <li><a href="https://github.com/ara923" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="mailto:your@email.com">Email</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 홍길동. Built with HTML, CSS & JS.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
